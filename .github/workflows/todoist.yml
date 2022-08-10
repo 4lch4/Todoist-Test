@@ -11,6 +11,6 @@ jobs:
     name: Primary Task Updater Action
     runs-on: ubuntu-20.04
     steps:
-      - uses: ptallen63/todoist-task-action@v1
+      - uses: ptallen63/todoist-task-action@v1.0.3
         with:
           token: ${{ secrets.TODOIST_API_KEY }}
