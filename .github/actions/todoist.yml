@@ -1,0 +1,16 @@
+# This Action file is responsible for creating tasks in Todoist when certain events occur.
+name: Todoist Task Updater
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  primary:
+    name: Primary Task Updater Action
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: ptallen63/todoist-task-action@v1
+        with:
+          token: ${{ secrets.TODOIST_API_KEY }}
